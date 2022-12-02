@@ -17,9 +17,11 @@ public class ContinueToHomePage {
 	@FindBy(className = "button-dep ")
 	WebElement continueToHome;
 
+
 	public void aboutAutoSteps() {
 		((JavascriptExecutor) driver).executeScript("document.getElementById('continueToHome').click();");
 		click(continueToHome);
+		
 
 		
 	}

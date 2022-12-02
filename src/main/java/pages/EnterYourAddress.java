@@ -9,17 +9,23 @@ import common.CommonActions;
 
 public class EnterYourAddress {
 	WebDriver driver;
-	
+
 	public EnterYourAddress(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath = "//input[@id='line1']") WebElement address;
-	@FindBy(xpath = "//input[@id='city']") WebElement city;
-	@FindBy(xpath = "//input[@id='state']")WebElement state;
-	@FindBy(xpath = "//input[@id='zip']")WebElement zipCode;
-	@FindBy(xpath = "(//span[@class='MuiButton-label'])[2]")WebElement getQout;
-	
+
+	@FindBy(xpath = "//input[@id='line1']")
+	WebElement address;
+	@FindBy(xpath = "//input[@id='city']")
+	WebElement city;
+	@FindBy(xpath = "//input[@id='state']")
+	WebElement state;
+	@FindBy(xpath = "//input[@id='zip']")
+	WebElement zipCode;
+	@FindBy(xpath = "(//span[@class='MuiButton-label'])[2]")
+	WebElement getQout;
+
 	public void enterYourAddressSteps() throws InterruptedException {
 		CommonActions.input(address, "1202 Avenue K");
 		CommonActions.input(city, "Brooklyn");
